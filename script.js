@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const updateStatBar = (statName, value) => {
-      const maxStat = 255;
+      const maxStat = 150; 
       const percentage = (value / maxStat) * 100;
       const barElement = document.getElementById(`${statName}-bar`);
       barElement.style.width = `${percentage}%`;
