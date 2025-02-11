@@ -3,16 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokémon Search</title>
+  <title>Pokédex</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <div class="card-header">
-      <h1 class="card-title">Pokémon Search</h1>
+  <div class="pokedex">
+    <div class="pokedex-left">
+      <div class="lights-container">
+        <div class="light-big"></div>
+        <div class="lights-small">
+          <div class="light red"></div>
+          <div class="light yellow"></div>
+          <div class="light green"></div>
+        </div>
+      </div>
+      <div class="screen-container">
+        <div class="screen-border">
+          <div class="screen">
+            <img id="sprite" alt="Pokemon" class="pokemon-image hidden"/>
+          </div>
+        </div>
+        <div class="screen-buttons">
+          <div class="button red"></div>
+          <div class="button small"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="d-pad">
+          <div class="d-pad-row">
+            <div class="d-pad-btn up"></div>
+          </div>
+          <div class="d-pad-row">
+            <div class="d-pad-btn left"></div>
+            <div class="d-pad-btn middle"></div>
+            <div class="d-pad-btn right"></div>
+          </div>
+          <div class="d-pad-row">
+            <div class="d-pad-btn down"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="card-content">
-      <div class="input-group">
+    <div class="pokedex-right">
+      <div class="info-screen">
+        <div id="pokemon-data" class="pokemon-info hidden">
+          <h2 id="pokemon-name"></h2>
+          <p id="pokemon-id"></p>
+          <div id="types" class="pokemon-types"></div>
+          <div class="stats">
+            <div class="stat-row">
+              <span>HP:</span>
+              <div class="stat-bar">
+                <div id="hp-bar" class="stat-bar-fill"></div>
+              </div>
+              <span id="hp"></span>
+            </div>
+            <div class="stat-row">
+              <span>Attack:</span>
+              <div class="stat-bar">
+                <div id="attack-bar" class="stat-bar-fill"></div>
+              </div>
+              <span id="attack"></span>
+            </div>
+            <div class="stat-row">
+              <span>Defense:</span>
+              <div class="stat-bar">
+                <div id="defense-bar" class="stat-bar-fill"></div>
+              </div>
+              <span id="defense"></span>
+            </div>
+            <div class="stat-row">
+              <span>Sp. Attack:</span>
+              <div class="stat-bar">
+                <div id="special-attack-bar" class="stat-bar-fill"></div>
+              </div>
+              <span id="special-attack"></span>
+            </div>
+            <div class="stat-row">
+              <span>Sp. Defense:</span>
+              <div class="stat-bar">
+                <div id="special-defense-bar" class="stat-bar-fill"></div>
+              </div>
+              <span id="special-defense"></span>
+            </div>
+            <div class="stat-row">
+              <span>Speed:</span>
+              <div class="stat-bar">
+                <div id="speed-bar" class="stat-bar-fill"></div>
+              </div>
+              <span id="speed"></span>
+            </div>
+          </div>
+          <div class="pokemon-metrics">
+            <p id="height"></p>
+            <p id="weight"></p>
+          </div>
+        </div>
+      </div>
+      <div class="input-container">
         <input
           id="search-input"
           type="text"
@@ -21,30 +109,8 @@
         />
         <button id="search-button">Search</button>
       </div>
-
-      <div id="pokemon-data" class="hidden">
-        <div class="pokemon-details">
-          <img id="sprite" alt="Pokemon" class="pokemon-image"/>
-          <h2 id="pokemon-name"></h2>
-          <p id="pokemon-id"></p>
-        </div>
-
-        <div id="types" class="pokemon-types"></div>
-
-        <div class="stats">
-          <p id="weight"></p>
-          <p id="height"></p>
-          <p id="hp"></p>
-          <p id="attack"></p>
-          <p id="defense"></p>
-          <p id="special-attack"></p>
-          <p id="special-defense"></p>
-          <p id="speed"></p>
-        </div>
-      </div>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
