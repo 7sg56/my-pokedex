@@ -24,11 +24,11 @@ Check out the live demo: [Pokédex Web Application](https://7sg56.github.io/my-p
 ## Installation
 1. Clone this repository:
    ```
-   git clone https://github.com/7sg56/PokeMonAPI.git
+   git clone https://github.com/7sg56/my-pokedex.git
    ```
 2. Navigate to the project directory:
    ```
-   cd PokeMonAPI
+   cd my-pokedex
    ```
 3. Open `index.html` in your web browser.
 
